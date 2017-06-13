@@ -26,6 +26,8 @@ struct CalculatorBrain {
         "e" : operation.constant(M_E),
         "√" : operation.unaryOperation(sqrt),
         "cos" : operation.unaryOperation(cos),
+        "sin" : operation.unaryOperation(sin),
+        "tan" : operation.unaryOperation(tan),
         "±" : operation.unaryOperation({ -$0 }),
         "×" : operation.binaryOperation({ $0 * $1 }),
         "÷" : operation.binaryOperation({ $0 / $1 }),
@@ -75,7 +77,6 @@ struct CalculatorBrain {
     mutating func SetOperand(_ operand: Double){
         accumulator = operand
     }
-    
     
     var result: Double? {
         get {
