@@ -12,3 +12,7 @@ let i = 27
 var f: (Double) -> Double
 f = changeSign(operand:)
 let x = f(81)
+
+
+
+
