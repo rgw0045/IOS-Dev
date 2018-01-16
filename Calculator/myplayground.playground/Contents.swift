@@ -2,19 +2,25 @@
 
 import UIKit
 
-func albumReleased(year: Int) -> String?{
-    switch year {
-    case 2006:
-        return "Taylor Swift"
-    case 2008: return "Fearless"
-    case 2010: return "Speak Now"
-    case 2012: return "Red"
-    case 2014: return "1989"
-    default:
-        return nil
+func GetMilk(howManyMilkCartons: Int, howMuchMoneyDoIHave: Int) -> Int {
+    print("Go to tge shop")
+    print("buy \(howManyMilkCartons) milk cartons")
+    
+    let priceToPay = howManyMilkCartons * 2
+    
+    print ("pay $\(priceToPay) dollars")
+    print("come home")
+    
+    let change = howMuchMoneyDoIHave - priceToPay
+    
+    if(priceToPay > howMuchMoneyDoIHave){
+        return 0
     }
+    
+    return change
 }
 
-let album = albumReleased(year: 2006)?.uppercased()
-print("The album is \(album)")
+//call get milk cartons
+var amountOfChange = GetMilk(howManyMilkCartons: 4, howMuchMoneyDoIHave: 10)
 
+print("Hello master your have $\(amountOfChange) moneis left")
